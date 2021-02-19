@@ -1,5 +1,7 @@
+import { Title } from '../styles/pages/Home';
+
 const Home: React.FC = () => {
-  return <h1>Hello World!</h1>
+  return <Title>Hello World!</Title>
 }
 
 export default Home;

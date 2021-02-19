@@ -37,14 +37,25 @@ Arquivos com _ antes como _app não é considerado como uma rota.
 
 Criar arquivo com [slug].tsx para parâmetros de rotas.
 
-```console
 
+### Styled components
+
+
+
+```console
+yarn add styled-components
+yarn add @types/styled-components -D
 ```
 
+Ir na documentação e procurar server side rendering.
+
+.babelrc = babel.config.js
 
 ```console
-
+yarn add babel-plugin-styled-components -D
 ```
+
+Adicionar babel.config.js e src/_document.tsx para carregar estilos mesmo com f5.
 
 
 ```console
