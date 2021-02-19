@@ -1,3 +1,59 @@
+# Projeto de teste do Next.js
+
+## Comandos utilizados
+
+Criar projeto
+
+```console
+npx create-next-app nextjs-app
+```
+asda
+
+### Typescript
+
+```console
+yarn add typescript @types/node @types/react -D 
+```
+
+Então trocar arquivos js para tsx.
+
+Limpar pastas
+
+### Executar projeto
+
+```console
+yarn dev
+```
+
+Na primeira execução, vai detectar e gerar arquivos para o typescript.
+
+
+```console
+
+```
+
+
+```console
+
+```
+
+
+```console
+
+```
+
+
+```console
+
+```
+
+
+```console
+
+```
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
