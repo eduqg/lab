@@ -27,6 +27,15 @@ yarn dev
 
 Na primeira execução, vai detectar e gerar arquivos para o typescript.
 
+O Next.js tem páginas que se eu desabilitar o javascript e recarregar a página, o mesmo conteúdo irá ser renderizado.
+
+Ao criar um arquivo em pages já cria uma rota.
+
+Arquivos com _ antes como _app não é considerado como uma rota.
+
+### Dynamic Routing
+
+Criar arquivo com [slug].tsx para parâmetros de rotas.
 
 ```console
 
