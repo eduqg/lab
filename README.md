@@ -40,8 +40,6 @@ Criar arquivo com [slug].tsx para parâmetros de rotas.
 
 ### Styled components
 
-
-
 ```console
 yarn add styled-components
 yarn add @types/styled-components -D
@@ -58,8 +56,25 @@ yarn add babel-plugin-styled-components -D
 Adicionar babel.config.js e src/_document.tsx para carregar estilos mesmo com f5.
 
 
-```console
+### Json server
 
+```console
+json-server server.json --port 3333 -w
+npx json-server server.json --port 3333 -w
+
+Com delay de 2 segundos
+
+json-server server.json --port 3333 -w -d 2000 
+```
+
+### Build de produção
+
+Para páginas estáticas, ao fazer yarn build, são geradas para a produção. yarn start
+
+Para rodar a build de produção
+
+```console
+yarn start
 ```
 
 
@@ -67,12 +82,7 @@ Adicionar babel.config.js e src/_document.tsx para carregar estilos mesmo com f5
 
 ```
 
-
-```console
-
-```
-
-
+## Readme gerado automaticamente
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
