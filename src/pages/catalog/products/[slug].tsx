@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import dynamic from 'next/dynamic'
 
 // Lazy load de componente
-const AddToCartModal = dynamic(() => import('../../../components/AddToCartModal'),
+const AddToCartModal = dynamic(() => import('@/components/AddToCartModal'),
   // ssr false, se o component depende de variável do browser
   // página sempre seja renderizada no lado do cliente
   { loading: () => <p>Carregando</p>, ssr: false }

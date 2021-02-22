@@ -1,3 +1,4 @@
+import SEO from '@/components/SEO';
 import { GetServerSideProps } from 'next';
 import { useCallback, useEffect, useState } from 'react';
 import { Title } from '../styles/pages/Home';
@@ -30,6 +31,12 @@ const Home: React.FC<IHomeProps> = ({ recommendedProduts }) => {
 
   return (
     <div>
+
+      <SEO
+        title="Your best e-commerce"
+        image="boost.png"
+        shouldExcludeTitleSuffix />
+
       <section>
         <Title>Hello World!</Title>
 
@@ -53,7 +60,7 @@ const Home: React.FC<IHomeProps> = ({ recommendedProduts }) => {
 // Apenas para informações para motores de busca
 // Fazer isso aumenta o TTFB -> time to first byte, tempo que o primeiro código fica disponível para o usuário 
 export const getServerSideProps: GetServerSideProps<IHomeProps> = async () => {
-  const response = await fetch(`${process.env.API_URL}/recommended`);
+  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/recommended`);
   const recommendedProduts = await response.json();
 
   return {

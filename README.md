@@ -7,12 +7,13 @@ Criar projeto
 ```console
 npx create-next-app nextjs-app
 ```
+
 asda
 
 ### Typescript
 
 ```console
-yarn add typescript @types/node @types/react -D 
+yarn add typescript @types/node @types/react -D
 ```
 
 Então trocar arquivos js para tsx.
@@ -31,12 +32,11 @@ O Next.js tem páginas que se eu desabilitar o javascript e recarregar a página
 
 Ao criar um arquivo em pages já cria uma rota.
 
-Arquivos com _ antes como _app não é considerado como uma rota.
+Arquivos com \_ antes como \_app não é considerado como uma rota.
 
 ### Dynamic Routing
 
 Criar arquivo com [slug].tsx para parâmetros de rotas.
-
 
 ### Styled components
 
@@ -53,8 +53,7 @@ Ir na documentação e procurar server side rendering.
 yarn add babel-plugin-styled-components -D
 ```
 
-Adicionar babel.config.js e src/_document.tsx para carregar estilos mesmo com f5.
-
+Adicionar babel.config.js e src/\_document.tsx para carregar estilos mesmo com f5.
 
 ### Json server
 
@@ -64,7 +63,7 @@ npx json-server server.json --port 3333 -w
 
 Com delay de 2 segundos
 
-json-server server.json --port 3333 -w -d 2000 
+json-server server.json --port 3333 -w -d 2000
 ```
 
 ### Build de produção
@@ -83,30 +82,33 @@ env.development -> vai para o git
 
 env.local -> gitignore, no client side não funciona.
 
-
 API_URL=http://localhost:3333 -> não funciona no client side (React.FC em desenvolvimento)
 NEXT_PUBLIC_API_URL=http://localhost:3333 -> funcina no client side
 
+### Root import
+
+No tsconfig.json
+
+Sempre partindo da pasta src, tudo que começar com @/ vou redirecionar para a pasta src.
+
+```console
+"baseUrl": "./src",
+  "paths": {
+    "@/*": ["./*"]
+  }
+```
 
 ```console
 
 ```
 
-
 ```console
 
 ```
 
-
 ```console
 
 ```
-
-
-```console
-
-```
-
 
 ```console
 

@@ -1,7 +1,5 @@
-import { GetServerSideProps, GetStaticPaths, GetStaticProps } from 'next';
-import { route } from 'next/dist/next-server/server/router';
+import { GetStaticPaths, GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
 
 interface IProduct {
   id: string;
@@ -16,10 +14,10 @@ const Category: React.FC<ICategoryProps> = ({ products }) => {
   const router = useRouter();
 
   // Indica que a página estática está sendo gerada
-  if(router.isFallback) {
+  if (router.isFallback) {
     return <p>Carregando...</p>
   }
-  
+
   return (
     <div>
       <section>
