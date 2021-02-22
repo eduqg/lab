@@ -1,5 +1,5 @@
 import { GetServerSideProps } from 'next';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { Title } from '../styles/pages/Home';
 
 interface IProduct {
@@ -21,6 +21,13 @@ const Home: React.FC<IHomeProps> = ({ recommendedProduts }) => {
   //   })
   // }, [])
 
+  const handleSum = useCallback(async () => {
+    // Dynamic import
+    const math = (await import('../lib/math')).default;
+
+    alert(math.sum(3, 4));
+  }, []);
+
   return (
     <div>
       <section>
@@ -34,6 +41,8 @@ const Home: React.FC<IHomeProps> = ({ recommendedProduts }) => {
           ))}
         </ul>
       </section>
+
+      <button type="button" onClick={handleSum}>Sum!</button>
     </div>
   )
 }
@@ -44,7 +53,7 @@ const Home: React.FC<IHomeProps> = ({ recommendedProduts }) => {
 // Apenas para informações para motores de busca
 // Fazer isso aumenta o TTFB -> time to first byte, tempo que o primeiro código fica disponível para o usuário 
 export const getServerSideProps: GetServerSideProps<IHomeProps> = async () => {
-  const response = await fetch('http://localhost:3333/recommended');
+  const response = await fetch(`${process.env.API_URL}/recommended`);
   const recommendedProduts = await response.json();
 
   return {

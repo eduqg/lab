@@ -77,6 +77,36 @@ Para rodar a build de produção
 yarn start
 ```
 
+### Envs
+
+env.development -> vai para o git
+
+env.local -> gitignore, no client side não funciona.
+
+
+API_URL=http://localhost:3333 -> não funciona no client side (React.FC em desenvolvimento)
+NEXT_PUBLIC_API_URL=http://localhost:3333 -> funcina no client side
+
+
+```console
+
+```
+
+
+```console
+
+```
+
+
+```console
+
+```
+
+
+```console
+
+```
+
 
 ```console
 

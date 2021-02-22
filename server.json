@@ -1,7 +1,8 @@
 {
   "categories": [
     { "id": "camisetas", "title": "Camisetas" },
-    { "id": "calcas", "title": "Calças" }
+    { "id": "calcas", "title": "Calças" },
+    { "id": "meias", "title": "Meias" }
   ],
   "products": [
     {
@@ -31,6 +32,13 @@
       "price": 109.9,
       "category_id": "calcas",
       "slug": "calca-azul-react"
+    },
+    {
+      "id": 5,
+      "title": "Meia Verde",
+      "price": 20.9,
+      "category_id": "meias",
+      "slug": "meia-verde"
     }
   ],
   "recommended": [
