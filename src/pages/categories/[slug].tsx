@@ -27,7 +27,7 @@ const Category: React.FC<ICategoryProps> = ({ products, category }) => {
         <ul>
           {products.map((product) => (
             <li key={product.id}>
-              <Link href={`/category/${product.uid}`}>
+              <Link href={`/catalog/products/${product.uid}`}>
                 <a>
                   {PrismicDOM.RichText.asText(product.data.title)}
                 </a>
