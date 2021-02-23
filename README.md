@@ -98,12 +98,28 @@ Sempre partindo da pasta src, tudo que começar com @/ vou redirecionar para a p
   }
 ```
 
-```console
+### Integração com CMS
 
+Ghost, mais recomendado para blogs, com interface se quiser
+
+Strapi, headless, sem interface. Problemas em projeto maiores quando tem mais relacionamentos no banco ele se perde.
+
+Prismic, utilizado na rocket, usado para landing pages, NLW, informações dinâmicas, marketing pode editar. Tem plano gratuito.
+
+Contentful, bom, mas mais caro, muito escalável, robusto.
+
+Vamos utilizar Prismic nesse projeto. O NextJS pode integrar com muitos CMSs.
+
+
+### Prismic
+
+
+```console
+yarn add prismic-javascript prismic-dom
 ```
 
 ```console
-
+yarn add @types/prismic-dom -D
 ```
 
 ```console

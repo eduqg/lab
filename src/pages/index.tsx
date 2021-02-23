@@ -1,6 +1,12 @@
 import SEO from '@/components/SEO';
+import Link from 'next/link';
+import { client } from '@/lib/prismic';
 import { GetServerSideProps } from 'next';
 import { useCallback, useEffect, useState } from 'react';
+import Prismic from 'prismic-javascript';
+import { Document } from 'prismic-javascript/types/documents'
+import PrismicDOM from 'prismic-dom';
+
 import { Title } from '../styles/pages/Home';
 
 interface IProduct {
@@ -9,7 +15,7 @@ interface IProduct {
 }
 
 interface IHomeProps {
-  recommendedProduts: IProduct[];
+  recommendedProduts: Document[];
 }
 
 const Home: React.FC<IHomeProps> = ({ recommendedProduts }) => {
@@ -43,7 +49,11 @@ const Home: React.FC<IHomeProps> = ({ recommendedProduts }) => {
         <ul>
           {recommendedProduts.map((recommendedProduct) => (
             <li key={recommendedProduct.id}>
-              {recommendedProduct.title}
+              <Link href={`/catalog/products/${recommendedProduct.uid}`}>
+                <a>
+                  {PrismicDOM.RichText.asText(recommendedProduct.data.title)}
+                </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -60,12 +70,13 @@ const Home: React.FC<IHomeProps> = ({ recommendedProduts }) => {
 // Apenas para informações para motores de busca
 // Fazer isso aumenta o TTFB -> time to first byte, tempo que o primeiro código fica disponível para o usuário 
 export const getServerSideProps: GetServerSideProps<IHomeProps> = async () => {
-  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/recommended`);
-  const recommendedProduts = await response.json();
+  const recommendedProduts = await client().query([
+    Prismic.Predicates.at('document.type', 'product')
+  ]);
 
   return {
     props: {
-      recommendedProduts
+      recommendedProduts: recommendedProduts.results
     }
   }
 
