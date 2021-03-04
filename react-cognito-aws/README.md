@@ -5,6 +5,38 @@ Project made from video AWS Cognito Tutorial Part I and II | Cognito User Pool &
 
 ```console
 npm i
-npm start
+npm run start
 ```
 
+## AWS Amplify
+
+```console
+npm i aws-amplify
+```
+
+
+```console
+
+```
+
+
+```console
+
+```
+
+
+```console
+
+```
+
+
+
+```console
+
+```
+
+
+
+```console
+
+```

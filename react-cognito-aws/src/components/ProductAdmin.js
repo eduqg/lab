@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import Product from './Product';
 import axios from "axios";
-const config = require('../config.json');
 
 export default class ProductAdmin extends Component {
 
@@ -21,7 +20,7 @@ export default class ProductAdmin extends Component {
         "id": id,
         "productname": this.state.newproduct.productname
       };
-      await axios.post(`${config.api.invokeUrl}/products/${id}`, params);
+      await axios.post(`${process.env.REACT_APP_INVOKE_URL}/products/${id}`, params);
       this.setState({ products: [...this.state.products, this.state.newproduct] });
       this.setState({ newproduct: { "productname": "", "id": "" }});
     }catch (err) {
@@ -36,7 +35,7 @@ export default class ProductAdmin extends Component {
         "id": id,
         "productname": name
       };
-      await axios.patch(`${config.api.invokeUrl}/products/${id}`, params);
+      await axios.patch(`${process.env.REACT_APP_INVOKE_URL}/products/${id}`, params);
       const productToUpdate = [...this.state.products].find(product => product.id === id);
       const updatedProducts = [...this.state.products].filter(product => product.id !== id);
       productToUpdate.productname = name;
@@ -51,7 +50,7 @@ export default class ProductAdmin extends Component {
     event.preventDefault();
     // add call to AWS API Gateway delete product endpoint here
     try {
-      await axios.delete(`${config.api.invokeUrl}/products/${id}`);
+      await axios.delete(`${process.env.REACT_APP_INVOKE_URL}/products/${id}`);
       const updatedProducts = [...this.state.products].filter(product => product.id !== id);
       this.setState({products: updatedProducts});
     }catch (err) {
@@ -63,7 +62,7 @@ export default class ProductAdmin extends Component {
     // add call to AWS API Gateway to fetch products here
     // then set them in state
     try {
-      const res = await axios.get(`${config.api.invokeUrl}/products`);
+      const res = await axios.get(`${process.env.REACT_APP_INVOKE_URL}/products`);
       const products = res.data;
       this.setState({ products: products });
     } catch (err) {
