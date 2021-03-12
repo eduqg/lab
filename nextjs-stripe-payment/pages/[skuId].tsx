@@ -2,7 +2,6 @@ import React from 'react';
 import Stripe from 'stripe';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Link from 'next/link';
-import Router from 'next/router';
 
 import stripeConfig from '../config/stripe'
 
@@ -18,14 +17,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
   // sku = estoque
   const skus = await stripe.skus.list();
 
-  console.log(skus);
   const paths = skus.data.map(sku => ({
     params: {
       skuId: sku.id
     }
   }))
-
-  console.log(paths)
 
   return {
     paths,

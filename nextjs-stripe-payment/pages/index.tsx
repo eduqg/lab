@@ -1,16 +1,13 @@
+import React from 'react';
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-
-
-
-
-import React from 'react';
 import Stripe from 'stripe';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Link from 'next/link';
 import Router from 'next/router';
 
 import stripeConfig from '../config/stripe'
+import CheckoutButton from '../components/CheckoutButton';
 
 interface HomeProps {
   skus: Stripe.Sku[]
@@ -47,7 +44,12 @@ const Home: React.FC<HomeProps> = ({ skus }) => {
               style={{ width: '100px' }} />
           )}
 
+
           <h2>{Number(sku.price / 100).toFixed(2)} {sku.currency.toUpperCase()}</h2>
+
+          <CheckoutButton skuId={sku.id} itemName={sku.attributes.name} />
+
+          <br />
 
           <Link href={"/" + sku.id}>Show product</Link>
           <hr />
