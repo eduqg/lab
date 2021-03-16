@@ -1,7 +1,9 @@
 import React from "react";
 import { render } from "@testing-library/react";
+import 'jest-styled-components';
 
 import TestComponent from "./TestComponent";
+
 import { TestComponentProps } from "./TestComponent.types";
 
 describe("Test Component", () => {
@@ -13,14 +15,15 @@ describe("Test Component", () => {
     };
   });
 
-  const renderComponent = () => render(<TestComponent  {...props} />);
+  const renderComponent = () => render(<TestComponent {...props} />);
 
   it("should have primary className with default props", () => {
     const { getByTestId } = renderComponent();
 
     const testComponent = getByTestId("test-component");
 
-    expect(testComponent).toHaveClass("test-component-primary");
+    expect(testComponent).toHaveStyleRule("background-color", "white");
+    expect(testComponent).toHaveStyleRule("color", "blue");
   });
 
   it("should have secondary className with theme set as secondary", () => {
@@ -29,6 +32,7 @@ describe("Test Component", () => {
 
     const testComponent = getByTestId("test-component");
 
-    expect(testComponent).toHaveClass("test-component-secondary");
+    expect(testComponent).toHaveStyleRule("background-color", "blue");
+    expect(testComponent).toHaveStyleRule("color", "white");
   });
 });
