@@ -20,6 +20,8 @@ Resetar CSS Meyer Web
 
 ```console
 
+Estilos em scss possuem chavese ponto e vírcula, em sass não possui, utiliza identações.
+
 ```
 
 ```console

@@ -1,0 +1,78 @@
+.header {
+  font-family: Arial, Helvetica, sans-serif;
+  /*
+  BEM block, element, modifier
+  A sigla BEM significa block, element, modifier e segue essas propriedades para definir uma nova metodologia de criação de nomes para classes de folhas de estilo.
+  usa-se __ (para elemento pai) e -- para filho
+
+  .container (elemento pai)
+  .container__item (elemento filho)
+  .container__item--secondary (elemento filho modificado)
+
+  Parent selector: elementos encadeados
+  */
+
+  &__logo {
+    text-align: center;
+  }
+
+  &__img {
+    max-width: 350px;
+  }
+
+  .menu {
+    &__list {
+      display: flex;
+      justify-content: center;
+      border-top: 1px solid $light-grey;
+      border-bottom: 1px solid $light-grey;
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%;
+      padding: 20px 0;
+
+      @include for-phone-only {
+        width: 90%;
+        padding: 15px 0;
+        flex-wrap: wrap;
+      }
+
+      @include for-tablet-only {
+        width: 80%;
+        padding: 20px 0;
+      }
+      @include for-desktop-only {
+        width: 80%;
+        padding: 20px 0;
+      }
+    }
+
+    &__links {
+      position: relative;
+      @include for-phone-only {
+        padding: 5px 0;
+      }
+
+      &:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: -3px;
+        margin: auto;
+        height: 15px;
+        width: 1px;
+        background-color: $light-grey;
+      }
+    }
+
+    &__link {
+      padding: 0 25px;
+      color: $dark-grey;
+
+      &:hover {
+        color: $purple;
+      }
+    }
+  }
+}

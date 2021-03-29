@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sass Project Petshop</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <figure class="header__logo">
+        <img src="assets/img/logo.png" alt="Logo" class="header__img" />
+      </figure>
+
+      <nav class="header__menu menu">
+        <ul class="menu__list">
+          <li class="menu__links">
+            <a href="index.html" class="menu__link">Página inicial</a>
+            <a href="index.html" class="menu__link">Sobre nós</a>
+            <a href="collection.html" class="menu__link">Cães</a>
+            <a href="collection.html" class="menu__link">Gatos</a>
+            <a href="collection.html" class="menu__link">Passaros</a>
+            <a href="#" class="menu__link">Contato</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <article class="about">
+      <div class="about__title">
+        <h1 class="about__h1">Sobre nós</h1>
+        <div class="about__breadcrumb breadcrumb">
+          <a href="index.html" class="breadcrumb__link">Home</a>
+          <img
+            src="./assets/img/arrow.svg"
+            alt="Seta"
+            class="breadcrumb__img"
+          />
+          <a href="about.html" class="breadcrumb__link">Sobre nós</a>
+        </div>
+        <div class="about__content">
+          <img
+            src="./assets/img/dog-cat.jpg"
+            alt="Dog and cat"
+            class="about__img"
+          />
+          <p class="about__intro">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod
+          </p>
+          <div class="about__split">
+            <img src="assets/img/about.png" alt="Gato" class="about__img-description" />
+            <div class="about__txt">
+              <p class="about__p">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod
+              </p>
+              <p class="about__p">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod
+              </p>
+              <p class="about__p">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <footer class="footer">
+      <img
+        src="./assets/img/footer-logo.png"
+        alt="Footer Logo"
+        class="footer__logo"
+      />
+      <p class="footer__txt">2021 Petshow Blog 2021. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
