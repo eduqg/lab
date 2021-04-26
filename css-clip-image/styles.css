@@ -1,0 +1,27 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: #f1f1f1;
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 3rem auto;
+}
+
+img {
+  width: 330px;
+  height: 400px;
+  padding-right: 20px;
+  float: left;
+  object-fit: cover;
+  clip-path: inset(0 0 0 0 round 0 200px 200px);
+  shape-outside: inset(0 0 0 0 round 0 200px 200px);
+  border-radius: 0 200px 200px 200px;
+  shape-margin: 0em;
+}
+
+p {
+  color: rgba(0, 0, 0, 0.6);
+}
