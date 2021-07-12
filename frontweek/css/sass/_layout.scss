@@ -1,0 +1,59 @@
+.menu {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 48px 16px;
+}
+
+@media screen and (max-width: 960px) {
+  .menu-left {
+    display: none;
+  }
+  .menu-right {
+    display: none;
+  }
+}
+
+// Container
+
+.container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  height: 90vh;
+}
+
+@media screen and (max-width: 960px) {
+  .hero {
+    height: auto;
+  }
+  .container {
+    flex-direction: column;
+  }
+}
+
+.container-item:nth-child(1) {
+  // Fala como itens filhos irão crescer
+  flex-grow:3;
+  margin: 40px 0;
+}
+
+.container-item:nth-child(2) {
+  // Fala como itens filhos irão crescer
+  flex-grow:1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+
+  img {
+    max-width: 400px;
+  }
+}
