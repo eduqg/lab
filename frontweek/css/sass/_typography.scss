@@ -20,6 +20,7 @@ a {
   font-size: 24px;
   transition: opacity 0.5s ease;
   position: relative;
+  display: inline-block;
 
   &::after {
     content: '';
@@ -116,7 +117,7 @@ h6 {
     z-index: -1;
     width: 120px;
     height: 120px;
-    transform: translate(-0%, -22%) rotate(45deg);
+    transform: translate(-0%, -22%) rotate(60deg);
     background: linear-gradient(225deg, #2DC7ED 0%, rgba(83, 139, 240, 0) 100%);;
     border-radius: 4px;
     transition: .5s ease;
@@ -124,7 +125,7 @@ h6 {
 
   &:hover {
     &::after {
-      transform: translate(-0%, -22%) rotate(60deg);
+      transform: translate(-0%, -22%) rotate(90deg);
     }
   }
 }

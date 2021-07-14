@@ -1,4 +1,6 @@
-# FrontWeek
+# FrontWeek - FrontPush
+
+<img src="preview.png" alt="Frontpush profile" />
 
 ## Extensões VSCode
 
@@ -13,4 +15,3 @@ AB em Linha e AB em coluna: Desktop em linha dois itens, Mobile em coluna dois i
 
 Whatafont
 
-## 
