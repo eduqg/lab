@@ -1,0 +1,92 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(
+    322deg,
+    #045d7d,
+    #09597d,
+    #054973,
+    #073969,
+    #0e2b63,
+    #0f224a
+  );
+  background-size: 200% 200%;
+  animation: gradientAnimation 8s ease infinite;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background: url('ticks.png');
+  opacity: 0.2;
+  transform: scaleX(-1);
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  pointer-events: none;
+  user-select: none;
+}
+
+.leaf1,
+.leaf2,
+.leaf3,
+.leaf4 {
+  opacity: 0.1;
+}
+
+.leaf1 {
+  position: absolute;
+  animation: rotateRight 10s infinite linear;
+  height: 100px;
+  width: auto;
+  left: 0;
+  top: 0;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 5% 0%;
+  }
+  50% {
+    background-position: 96% 100%;
+  }
+  100% {
+    background-position: 5% 0%;
+  }
+}
+
+@keyframes rotateRight {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
