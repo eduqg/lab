@@ -7,3 +7,9 @@
 Progress bar on scroll page
 
 <img src="./page-scroll-progress-bar/preview.png" alt="Scroll Progress Bar">
+
+# css-scroll-snap
+
+Scroll Snap
+
+<img src="./css-scroll-snap/scroll-snap.gif" alt="Scroll Snap">
