@@ -13,3 +13,9 @@ Progress bar on scroll page
 Scroll Snap
 
 <img src="./css-scroll-snap/scroll-snap.gif" alt="Scroll Snap">
+
+# react-text-scroll-highlight
+
+Highlight text when scroll
+
+<img src="./react-text-scroll-highlight/highlight.gif" alt="Highlight text when scroll">
