@@ -1,3 +1,11 @@
+# NextJS + Hygraph CMS
+
+Folder: next-hygraph-cms
+
+Static paths and static props sample
+
+<img src="./next-hygraph-cms/hygraph.png" alt="Hygraph app" />
+
 # CSS Animation Texture Gradient
 
 <img src="css-animation-gradient-texture/preview.png" alt="Animation Gradient Texture" />
